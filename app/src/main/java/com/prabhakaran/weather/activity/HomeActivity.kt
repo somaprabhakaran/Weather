@@ -52,7 +52,8 @@ class HomeActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        installSplashScreen()
+        val splash=installSplashScreen()
+        splash.setKeepOnScreenCondition{false}
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
